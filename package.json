@@ -1,0 +1,35 @@
+{
+  "name": "first-commit-date",
+  "description": "Get the date of a git repository's first commit.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jonschlinkert/first-commit-date",
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/first-commit-date",
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/first-commit-date/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "utils.js"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "gitty": "^3.2.3",
+    "lazy-cache": "^0.2.4"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "verb": {
+    "related": {
+      "list": []
+    }
+  }
+}
