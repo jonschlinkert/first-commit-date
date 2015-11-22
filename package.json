@@ -1,6 +1,6 @@
 {
   "name": "first-commit-date",
-  "description": "Get the date of a git repository's first commit.",
+  "description": "Returns a JavaScript date object with the date and time of a git repository's first commit.",
   "version": "0.1.0",
   "homepage": "https://github.com/jonschlinkert/first-commit-date",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
@@ -10,8 +10,7 @@
   },
   "license": "MIT",
   "files": [
-    "index.js",
-    "utils.js"
+    "index.js"
   ],
   "main": "index.js",
   "engines": {
@@ -21,15 +20,26 @@
     "test": "mocha"
   },
   "dependencies": {
-    "gitty": "^3.2.3",
-    "lazy-cache": "^0.2.4"
+    "get-first-commit": "^0.1.0"
   },
   "devDependencies": {
     "mocha": "*"
   },
+  "keywords": [
+    "commit",
+    "date",
+    "first",
+    "first-commit",
+    "git"
+  ],
   "verb": {
     "related": {
-      "list": []
+      "list": [
+        "github-base",
+        "git-repo-name",
+        "git-user-name",
+        "git-username"
+      ]
     }
   }
 }
