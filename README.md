@@ -22,6 +22,38 @@ firstCommitDate(function(err, date) {
 //=> first commit! Tue Nov 17 2015 13:29:18 GMT-0500 (EST)
 ```
 
+## API
+
+**Params**
+
+* `cwd` **{String}**: current working directory
+* `callback` **{Function}**
+* `returns` **{Object}**
+
+**Example**
+
+```js
+firstCommitDate('foo/.git', function(err, date) {
+  if (err) return console.log(err);
+  // do stuff with commit date
+});
+```
+
+### [.sync](index.js#L55)
+
+Synchronously get the first commit date from a git repository.
+
+**Params**
+
+* `cwd` **{String}**: current working directory
+* `returns` **{Object}**
+
+**Example**
+
+```js
+var date = firstCommitDate.sync('foo/.git');
+```
+
 ## Related projects
 
 * [git-repo-name](https://www.npmjs.com/package/git-repo-name): Get the repository name from the git remote origin URL. | [homepage](https://github.com/jonschlinkert/git-repo-name)
