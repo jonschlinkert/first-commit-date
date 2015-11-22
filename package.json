@@ -1,7 +1,7 @@
 {
   "name": "first-commit-date",
   "description": "Returns a JavaScript date object with the date and time of a git repository's first commit.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "https://github.com/jonschlinkert/first-commit-date",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/first-commit-date",
@@ -20,7 +20,7 @@
     "test": "mocha"
   },
   "dependencies": {
-    "get-first-commit": "^0.1.0"
+    "get-first-commit": "^0.2.0"
   },
   "devDependencies": {
     "mocha": "*"
