@@ -7,10 +7,9 @@
 
 'use strict';
 
-var lazy = require('lazy-cache')(require);
-lazy('gitty', 'git');
+var firstCommit = require('get-first-commit');
 
-function history(dir, cb) {
+module.exports = function firstCommitDate(dir, cb) {
   if (typeof dir === 'function') {
     cb = dir;
     dir = process.cwd();
@@ -20,19 +19,9 @@ function history(dir, cb) {
     throw new TypeError('expected callback to be a function');
   }
 
-  lazy.git(dir).log(function(err, history) {
+  firstCommit(dir, function(err, commit) {
     if (err) return cb(err);
 
-    history.sort(function(a, b) {
-      return b.date.localeCompare(a.date);
-    });
-
-    var commit = history[history.length - 1];
     cb(null, new Date(commit.date));
   });
-}
-
-history(function(err, res) {
-  if (err) return console.log(err);
-  console.log('first commit!', res);
-});
+};
